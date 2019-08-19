@@ -1,0 +1,46 @@
+enum Priority {
+  HIGH
+  MIDDLE
+  LOW
+}
+
+enum Status {
+  PENDING
+  STARTED
+  COMPLETED
+}
+
+enum Stage {
+  BACKLOG
+  PROGRESS
+  REVIEW
+  COMPLETE
+}
+
+type Board {
+  id: ID! @id
+  title: String!
+  tasks: [Task!]
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+
+type Task {
+  id: ID! @id
+  title: String!
+  priority: Priority! @default(value: LOW)
+  items: [Item!]
+  board: Board!
+  stage: Stage! @default(value: BACKLOG)
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+
+type Item {
+  id: ID! @id
+  title: String!
+  status: Status! @default(value: PENDING)
+  task: Task!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}

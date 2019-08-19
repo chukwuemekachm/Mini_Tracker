@@ -1,0 +1,47 @@
+@import 'variables';
+
+.task {
+  background-color: $white-smoke;
+  box-sizing: border-box;
+  border-radius: .2em;
+  box-shadow: 0 0.32em 2em rgba($light-slate-grey, .2);
+  padding: .8em;
+
+  &__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+
+    &--title {
+      font-size: 1.2em;
+      padding: .3em;
+      flex-grow: 1;
+      background-color: $white-smoke;
+      border: none;
+      margin-left: .3em;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: .097em solid $light-grey;
+        background-color: $ghost-white;
+      }
+    }
+
+    &--close {
+      font-size: 1.3em;
+      padding: .4em .65em;
+      border-radius: 300%;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($light-grey, .6);
+      }
+    }
+  }
+
+  &__board {
+    font-size: .8em;
+    margin-left: 1.8em;
+  }
+}

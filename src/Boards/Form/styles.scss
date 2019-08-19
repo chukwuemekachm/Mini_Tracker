@@ -1,0 +1,68 @@
+@import 'variables';
+
+.boards-form {
+  width: 24%;
+  background-color: $ghost-white;
+  padding: 1em;
+  margin-bottom: 2vh;
+  margin-left: 2vh;
+  box-sizing: border-box;
+  border-radius: .3em;
+  box-shadow: 0 0.32em 2em rgba($light-slate-grey, .2);
+
+  &__input {
+    border: none;
+    width: 100%;
+    height: 6vh;
+    font-size: .9em;
+    background-color: $ghost-white;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__footer {
+    margin-top: .8em;
+    box-sizing: border-box;
+
+
+    &--submit {
+      background-color: $medium-aqua-marine;
+      color: $white;
+      border: none;
+      padding: .4em .8em;
+      font-size: .8em;
+      border-radius: .3em;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: darken($medium-aqua-marine, 20);
+      }
+    }
+
+    &--cancel {
+      margin-left: .8em;
+      background-color: $white-smoke;
+      color: $light-slate-grey;
+      border: none;
+      padding: .4em .8em;
+      font-size: .8em;
+      border-radius: .3em;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $white;
+        background-color: darken($white-smoke, 15);
+      }
+    }
+  }
+}
