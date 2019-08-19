@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+
+  &__title {
+    display: flex;
+    align-content: baseline;
+  }
+
+  &__avatars {
+    i {
+      margin-left: 1em;
+    }
+  }
+}

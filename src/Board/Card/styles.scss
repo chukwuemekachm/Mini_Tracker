@@ -1,0 +1,62 @@
+@import 'variables';
+
+$priority-colors: (
+  "HIGH":      $palevioletred,
+  "MIDDLE":    $burly-wood,
+  "LOW":       $corn-flower-blue,
+);
+
+.card {
+  width: 100%;
+  background-color: $ghost-white;
+  padding: .8em;
+  box-sizing: border-box;
+  border-radius: .3em;
+  box-shadow: 0 0.32em 2em rgba($light-slate-grey, .2);
+  margin-top: .5em;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($ghost-white, 3);
+  }
+
+  :focus {
+    background-color: $ghost-white;
+  }
+
+  &__title {
+    font-size: 1em;
+    font-weight: 100;
+    margin-top: .8em;
+    margin-bottom: .8em;
+  }
+
+  @each $name, $color in $priority-colors {
+    &__tag-#{$name} {
+      font-size: .8em;
+      font-weight: 100;
+      padding: .12em .8em;
+      background-color: $plum;
+      border-radius: .3em;
+      color: $white;
+      background-color: $color;
+      text-transform: capitalize;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+
+    &--count  {
+      margin-left: .3em;
+      font-size: 1em;
+      font-weight: 100;
+    }
+
+    &--icon {
+      margin-left: .8em;
+    }
+  }
+}

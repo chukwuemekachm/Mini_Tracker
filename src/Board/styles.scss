@@ -1,0 +1,10 @@
+.board {
+  padding: 4vh 7vh;
+  box-sizing: border-box;
+
+  &__columns {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: space-between;
+  }
+}

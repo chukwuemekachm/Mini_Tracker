@@ -1,0 +1,31 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  color: $light-slate-grey;
+}
+
+body {
+  background-color: $white-smoke;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+#__MODAL__ {
+  width: 100vw;
+  height: 100vh;  
+}
+
+#__MODAL__ > div {
+  width: 50vw;
+  margin: auto;
+  position: fixed;
+  top: 0em;
+  left: 0em;
+  display: flex;
+  justify-content: center;  
+  padding: 5vh;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  background-color: rgba($light-slate-grey, .45);
+}

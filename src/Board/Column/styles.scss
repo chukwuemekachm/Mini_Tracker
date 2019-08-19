@@ -1,0 +1,65 @@
+@import 'variables';
+
+.column {
+  width: 20vw;
+  height: 75vh;
+  background-color: $white-smoke;
+  box-shadow: 0 0.32em 2em rgba($light-slate-grey, .2);
+  border-radius: .2em;
+  border-top: .25em solid $plum;
+  overflow-y: hidden;
+
+  &__header {
+    width: 100%;
+    padding: .8em .6em;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-content: center;
+    background-color: $white-smoke;
+
+    &--title {
+      font-size: 1.1em;
+      font-weight: 300;
+    }
+
+    &--info {
+      border: .1em solid $light-slate-grey;
+      padding: .1em .2em .01em .2em;
+      font-size: .9em;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $light-slate-grey;
+        color: $white;
+      }
+    }
+  }
+
+  &__body {
+    width: 100%;
+    padding: .8em;
+    height: 85%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 1em;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--text {
+      font-size: .85em;
+    }
+
+    &--icon {
+      margin-left: .3em;
+    }
+  }
+}
